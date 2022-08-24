@@ -592,7 +592,7 @@
                     </h5>
                   </div>
                   <div>
-                    <form name="submit-form" action="">
+                    <form id="submit-form" action="">
                       <label>Full name: </label><span><br>
                         <input
                           style="width: 60%;padding:8px 13px;margin:2px 0;display:inline-block;border:2px solid #ccc;"
@@ -689,13 +689,13 @@
     $("#submit-form").submit((e)=>{
         e.preventDefault()
         $.ajax({
-            url:"https://script.google.com/macros/s/AKfycbwn4_9bu5rh_Vaft1XAXDrAiK7jkdBbMhmBAvhvoGUJPMeo-uT1NAbAIi9m8l-IAiJLug/exec",
+            url:("https://script.google.com/macros/s/AKfycbyMcT-DMUtHdW-HyocP6YkPlg6zoAKu0Tf9Ko0tQg-jwX2HfD-HkcVZnNUExv7S1hlvNQ/exec"),
             data:$("#submit-form").serialize(),
             method:"post",
             success:function (response){
                 alert("Form submitted successfully")
                 window.location.reload()
-                //window.location.href="https://google.com"
+                window.location.href="https://google.com"
             },
             error:function (err){
                 alert("Something Error")
