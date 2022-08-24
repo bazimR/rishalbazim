@@ -590,39 +590,33 @@
                       Contact me
                     </h5>
                   </div>
-                  <div >
-                    <label>Full name: </label><span><br>
-                      <input style="width: 60%;padding:8px 13px;margin:2px 0;display:inline-block;border:2px solid #ccc;"
-                        id="lname"
-                        name="lname"
-                        placeholder="Full name"
-                      /><br /><br /></span>
-          
-                    <label>Email: </label><span><br>
-                      <input style="width: 60%;padding:8px 13px;margin:2px 0;display:inline-block;border:2px solid #ccc;"
-                        id="email"
-                        name="email"
-                        placeholder="abc@gmail.com"
-                        /><br /><br /></span>
-          
-          
-                    <label>Phone Number: </label><span><br>
-                      <input style="width: 60%;padding:8px 13px;margin:2px 0;display:inline-block;border:2px solid #ccc;"
-                        id="phone"
-                        name="phone"
-                        placeholder="+91 xxxx-nnnnnn"
-                        /><br /><br /></span>
-          
-          
-                        <label>Message: </label><span><br>
-                          <input style="width: 60%;padding:8px 13px;margin:2px 0;display:inline-block;border:2px solid #ccc;"
-                            id="description"
-                            name="description"
-                            placeholder="Message"
-                            /><br /><br /></span>
-          
-                        <p id="errors" style="color: brown"></p>
-                        <button onclick="handleCheckout()">Submit</button>
+                  <div>
+                    <form method="post" action="https://script.google.com/macros/s/AKfycbwn4_9bu5rh_Vaft1XAXDrAiK7jkdBbMhmBAvhvoGUJPMeo-uT1NAbAIi9m8l-IAiJLug/exec">
+                      <label>Full name: </label><span><br>
+                        <input
+                          style="width: 60%;padding:8px 13px;margin:2px 0;display:inline-block;border:2px solid #ccc;"
+                          id="lname" name="lname" placeholder="Full name" /><br /><br /></span>
+
+                      <label>Email: </label><span><br>
+                        <input
+                          style="width: 60%;padding:8px 13px;margin:2px 0;display:inline-block;border:2px solid #ccc;"
+                          id="email" name="email" placeholder="abc@gmail.com" /><br /><br /></span>
+
+
+                      <label>Phone Number: </label><span><br>
+                        <input
+                          style="width: 60%;padding:8px 13px;margin:2px 0;display:inline-block;border:2px solid #ccc;"
+                          id="phone" name="phone" placeholder="+91 xxxx-nnnnnn" /><br /><br /></span>
+
+
+                      <label>Message: </label><span><br>
+                        <input
+                          style="width: 60%;padding:8px 13px;margin:2px 0;display:inline-block;border:2px solid #ccc;"
+                          id="description" name="description" placeholder="Message" /><br /><br /></span>
+
+                      <p id="errors" style="color: brown"></p>
+                      <button onclick="handleCheckout()">Submit</button>
+                    </form>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -674,7 +668,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
   <script src="form.js"></script>
-  
+
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/popper/popper.min.js"></script>
