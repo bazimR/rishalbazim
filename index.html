@@ -7,6 +7,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
@@ -591,7 +592,7 @@
                     </h5>
                   </div>
                   <div>
-                    <form method="post" action="https://script.google.com/macros/s/AKfycbwn4_9bu5rh_Vaft1XAXDrAiK7jkdBbMhmBAvhvoGUJPMeo-uT1NAbAIi9m8l-IAiJLug/exec">
+                    <form name="submit-form" action="">
                       <label>Full name: </label><span><br>
                         <input
                           style="width: 60%;padding:8px 13px;margin:2px 0;display:inline-block;border:2px solid #ccc;"
@@ -684,6 +685,25 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbwn4_9bu5rh_Vaft1XAXDrAiK7jkdBbMhmBAvhvoGUJPMeo-uT1NAbAIi9m8l-IAiJLug/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
 
 </body>
 
