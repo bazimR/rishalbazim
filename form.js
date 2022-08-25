@@ -2,7 +2,7 @@ function handleCheckout(){
     let checkCondition = true;
   
     // name validation
-  let reFname = /^[a-zA-Z][a-zA-Z\\s]+$/;
+  let reFname =  /^[a-zA-Z][a-zA-Z\\s]+$/;
   let lname = document.querySelector("#lname").value;
   if (!reFname.test(lname)) {
     document.querySelector("#errors").innerHTML =
